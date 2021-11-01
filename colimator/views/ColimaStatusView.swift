@@ -11,7 +11,7 @@ struct ColimaStatusView: View {
     @EnvironmentObject var colimaStatusPublisher: ColimaStatusPublisher
 
     var body: some View {
-        VStack {
+        HStack {
             if colimaStatusPublisher.status != nil {
                 if colimaStatusPublisher.status!.running {
                     Text("Colima is running")

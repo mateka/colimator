@@ -11,14 +11,13 @@ struct MainView: View {
     @EnvironmentObject var colimaStatusPublisher: ColimaStatusPublisher
 
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Lorem ipsum")
-                
-                Spacer()
-                
-                ColimaStatusView()
+        VStack{
+            NavigationView {
+                ColimaNavigationView()
             }
+            .frame(minWidth: 300)
+
+            ColimaStatusView().frame(alignment: .bottom)
         }
     }
 }
