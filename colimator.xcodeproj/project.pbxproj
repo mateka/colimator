@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2941C9F272DA910002D0C1B /* shellCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941C9E272DA910002D0C1B /* shellCommand.swift */; };
+		E2941CA1272DAA5C002D0C1B /* colima.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CA0272DAA5C002D0C1B /* colima.swift */; };
+		E2941CA6272EF368002D0C1B /* ColimaStatusPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CA5272EF368002D0C1B /* ColimaStatusPublisher.swift */; };
+		E2941CA9272F0337002D0C1B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CA8272F0337002D0C1B /* MainView.swift */; };
+		E2941CAB272F0439002D0C1B /* ColimaStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CAA272F0439002D0C1B /* ColimaStatusView.swift */; };
+		E2941CAD27301616002D0C1B /* ColimaStatusParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CAC27301616002D0C1B /* ColimaStatusParserTests.swift */; };
+		E2941CAF27302F7D002D0C1B /* AsyncArrayOfStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CAE27302F7D002D0C1B /* AsyncArrayOfStrings.swift */; };
 		E2FA2567272D856B00621FC7 /* colimatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA2566272D856B00621FC7 /* colimatorApp.swift */; };
-		E2FA2569272D856B00621FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA2568272D856B00621FC7 /* ContentView.swift */; };
 		E2FA256B272D856C00621FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FA256A272D856C00621FC7 /* Assets.xcassets */; };
 		E2FA256E272D856C00621FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FA256D272D856C00621FC7 /* Preview Assets.xcassets */; };
 		E2FA2579272D856C00621FC7 /* colimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA2578272D856C00621FC7 /* colimatorTests.swift */; };
@@ -34,12 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2941C9D272DA104002D0C1B /* colimator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = colimator.entitlements; sourceTree = "<group>"; };
+		E2941C9E272DA910002D0C1B /* shellCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shellCommand.swift; sourceTree = "<group>"; };
+		E2941CA0272DAA5C002D0C1B /* colima.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colima.swift; sourceTree = "<group>"; };
+		E2941CA5272EF368002D0C1B /* ColimaStatusPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColimaStatusPublisher.swift; sourceTree = "<group>"; };
+		E2941CA8272F0337002D0C1B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E2941CAA272F0439002D0C1B /* ColimaStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColimaStatusView.swift; sourceTree = "<group>"; };
+		E2941CAC27301616002D0C1B /* ColimaStatusParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColimaStatusParserTests.swift; sourceTree = "<group>"; };
+		E2941CAE27302F7D002D0C1B /* AsyncArrayOfStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncArrayOfStrings.swift; sourceTree = "<group>"; };
 		E2FA2563272D856B00621FC7 /* colimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA2566272D856B00621FC7 /* colimatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colimatorApp.swift; sourceTree = "<group>"; };
-		E2FA2568272D856B00621FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2FA256A272D856C00621FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FA256D272D856C00621FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E2FA256F272D856C00621FC7 /* colimator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = colimator.entitlements; sourceTree = "<group>"; };
 		E2FA2574272D856C00621FC7 /* colimatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colimatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA2578272D856C00621FC7 /* colimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colimatorTests.swift; sourceTree = "<group>"; };
 		E2FA257E272D856C00621FC7 /* colimatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colimatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +84,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2941CA2272EEDB7002D0C1B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E2941C9E272DA910002D0C1B /* shellCommand.swift */,
+				E2941CA0272DAA5C002D0C1B /* colima.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		E2941CA3272EEDCD002D0C1B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E2941CA8272F0337002D0C1B /* MainView.swift */,
+				E2941CAA272F0439002D0C1B /* ColimaStatusView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		E2941CA4272EF279002D0C1B /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2941CA5272EF368002D0C1B /* ColimaStatusPublisher.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		E2FA255A272D856B00621FC7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +133,12 @@
 		E2FA2565272D856B00621FC7 /* colimator */ = {
 			isa = PBXGroup;
 			children = (
+				E2941CA4272EF279002D0C1B /* controllers */,
+				E2941CA3272EEDCD002D0C1B /* views */,
+				E2941CA2272EEDB7002D0C1B /* models */,
+				E2941C9D272DA104002D0C1B /* colimator.entitlements */,
 				E2FA2566272D856B00621FC7 /* colimatorApp.swift */,
-				E2FA2568272D856B00621FC7 /* ContentView.swift */,
 				E2FA256A272D856C00621FC7 /* Assets.xcassets */,
-				E2FA256F272D856C00621FC7 /* colimator.entitlements */,
 				E2FA256C272D856C00621FC7 /* Preview Content */,
 			);
 			path = colimator;
@@ -115,7 +155,9 @@
 		E2FA2577272D856C00621FC7 /* colimatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				E2941CAC27301616002D0C1B /* ColimaStatusParserTests.swift */,
 				E2FA2578272D856C00621FC7 /* colimatorTests.swift */,
+				E2941CAE27302F7D002D0C1B /* AsyncArrayOfStrings.swift */,
 			);
 			path = colimatorTests;
 			sourceTree = "<group>";
@@ -259,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FA2569272D856B00621FC7 /* ContentView.swift in Sources */,
+				E2941CAB272F0439002D0C1B /* ColimaStatusView.swift in Sources */,
+				E2941CA1272DAA5C002D0C1B /* colima.swift in Sources */,
+				E2941CA9272F0337002D0C1B /* MainView.swift in Sources */,
+				E2941C9F272DA910002D0C1B /* shellCommand.swift in Sources */,
 				E2FA2567272D856B00621FC7 /* colimatorApp.swift in Sources */,
+				E2941CA6272EF368002D0C1B /* ColimaStatusPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FA2579272D856C00621FC7 /* colimatorTests.swift in Sources */,
+				E2941CAD27301616002D0C1B /* ColimaStatusParserTests.swift in Sources */,
+				E2941CAF27302F7D002D0C1B /* AsyncArrayOfStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

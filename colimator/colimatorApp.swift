@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct colimatorApp: App {
+    @StateObject var colimaStatusPublisher = ColimaStatusPublisher()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(self.colimaStatusPublisher)
+                .task {
+                    await self.colimaStatusPublisher.updateStatus()
+                }
         }
     }
 }
