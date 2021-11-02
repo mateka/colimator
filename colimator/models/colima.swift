@@ -23,9 +23,9 @@ struct ColimaStatus {
     let kubernetesEnabled: Bool
 
     init() async throws {
-        try await self.init(
-            from_lines: shellCommand(command: "colima", "status").bytes.lines
-        )
+        try await self.init(from_lines: execCommand(
+            command: "/opt/homebrew/bin/colima", "status"  // TODO Homebrew path to settings
+        ).errorLines)
     }
 
     init(updated: Date, running: Bool, runtime: String, kubernetesEnabled: Bool) {
