@@ -11,6 +11,7 @@
 		E236083427304DCC0090E1AD /* ContainersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236083327304DCC0090E1AD /* ContainersView.swift */; };
 		E236083627304E120090E1AD /* ColimaNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236083527304E120090E1AD /* ColimaNavigationView.swift */; };
 		E23608382730598C0090E1AD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E23608372730598C0090E1AD /* .gitignore */; };
+		E236083A27306C280090E1AD /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236083927306C280090E1AD /* PageView.swift */; };
 		E2941C9F272DA910002D0C1B /* shellCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941C9E272DA910002D0C1B /* shellCommand.swift */; };
 		E2941CA1272DAA5C002D0C1B /* colima.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CA0272DAA5C002D0C1B /* colima.swift */; };
 		E2941CA6272EF368002D0C1B /* ColimaStatusPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2941CA5272EF368002D0C1B /* ColimaStatusPublisher.swift */; };
@@ -48,6 +49,7 @@
 		E236083327304DCC0090E1AD /* ContainersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainersView.swift; sourceTree = "<group>"; };
 		E236083527304E120090E1AD /* ColimaNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColimaNavigationView.swift; sourceTree = "<group>"; };
 		E23608372730598C0090E1AD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E236083927306C280090E1AD /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		E2941C9D272DA104002D0C1B /* colimator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = colimator.entitlements; sourceTree = "<group>"; };
 		E2941C9E272DA910002D0C1B /* shellCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shellCommand.swift; sourceTree = "<group>"; };
 		E2941CA0272DAA5C002D0C1B /* colima.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colima.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				E236083027304D9E0090E1AD /* ColimaSettingsView.swift */,
 				E236083327304DCC0090E1AD /* ContainersView.swift */,
+				E236083927306C280090E1AD /* PageView.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				E236083127304D9E0090E1AD /* ColimaSettingsView.swift in Sources */,
 				E2941CAB272F0439002D0C1B /* ColimaStatusView.swift in Sources */,
 				E2941CA1272DAA5C002D0C1B /* colima.swift in Sources */,
+				E236083A27306C280090E1AD /* PageView.swift in Sources */,
 				E2941CA9272F0337002D0C1B /* MainView.swift in Sources */,
 				E2941C9F272DA910002D0C1B /* shellCommand.swift in Sources */,
 				E2FA2567272D856B00621FC7 /* colimatorApp.swift in Sources */,

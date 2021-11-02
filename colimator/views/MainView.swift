@@ -11,14 +11,14 @@ struct MainView: View {
     @EnvironmentObject var colimaStatusPublisher: ColimaStatusPublisher
 
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             NavigationView {
                 ColimaNavigationView()
             }
-            .frame(minWidth: 300)
 
-            ColimaStatusView().frame(alignment: .bottom)
+            ColimaStatusView().frame(alignment: .bottomLeading)
         }
+        .frame(minWidth: 850, minHeight: 550)
     }
 }
 

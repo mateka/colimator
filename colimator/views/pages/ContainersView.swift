@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContainersView: View {
+    @EnvironmentObject var colimaStatusPublisher: ColimaStatusPublisher
+
     var body: some View {
-        Text("docker ps -A").font(.title)
+        PageView {
+            Text("docker ps -A").font(.title)
+        }
     }
 }
 

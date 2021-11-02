@@ -9,7 +9,22 @@ import SwiftUI
 
 struct ColimaSettingsView: View {
     var body: some View {
-        Text("Settings UI!").font(.title)
+        PageView {
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+            Text("Settings UI!").font(.title)
+
+            ForEach((1...100).reversed(), id: \.self) {
+                Text("Settings \($0)").font(.title)
+            }
+        }
     }
 }
 
