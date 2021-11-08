@@ -12,26 +12,23 @@ enum CommandError: Error {
     case runError(error: Error)
     case unsuccessful(
         exitCode: Int32, exitReason: Process.TerminationReason,
-        output: String?, errorsOutput: String?
+        output: AsyncLineSequence<FileHandle.AsyncBytes>,
+        errorsOutput: AsyncLineSequence<FileHandle.AsyncBytes>
     )
 }
 
 
-func readData(pipe: Pipe) async -> String? {
-    return try? await pipe.fileHandleForReading.bytes
-        .lines.reduce("") {$0 + "\n" + $1}
-}
-
-struct CommandResult {
-    let outputLines: AsyncLineSequence<FileHandle.AsyncBytes>
-    let errorLines: AsyncLineSequence<FileHandle.AsyncBytes>
+struct CommandResult: ExecutorResult {
+    typealias Sequence = AsyncLineSequence<FileHandle.AsyncBytes>
+    let outputLines: Sequence
+    let errorLines: Sequence
 }
 
 
-func execCommand(command: String, _ args: String...) async throws -> CommandResult {
+func execCommand(command: URL, args: [String]) async throws -> CommandResult {
     let task = Task.init { () -> CommandResult in
         let subProcess = Process()
-        subProcess.executableURL = URL(fileURLWithPath: command)
+        subProcess.executableURL = command
         subProcess.arguments = args
 
         var env = ProcessInfo.processInfo.environment
@@ -53,14 +50,11 @@ func execCommand(command: String, _ args: String...) async throws -> CommandResu
         }
 
         if subProcess.terminationStatus != 0 {
-            async let output: String? = readData(pipe: stdOut)
-            async let errors: String? = readData(pipe: stdErr)
-
-            throw await CommandError.unsuccessful(
+            throw CommandError.unsuccessful(
                 exitCode: subProcess.terminationStatus,
                 exitReason: subProcess.terminationReason,
-                output: output,
-                errorsOutput: errors
+                output: stdOut.fileHandleForReading.bytes.lines,
+                errorsOutput: stdErr.fileHandleForReading.bytes.lines
             )
         }
         return CommandResult(
@@ -69,4 +63,9 @@ func execCommand(command: String, _ args: String...) async throws -> CommandResu
         )
     }
     return try await task.value
+}
+
+
+func execCommand(command: URL, _ args: String...) async throws -> CommandResult {
+    try await execCommand(command: command, args: args)
 }

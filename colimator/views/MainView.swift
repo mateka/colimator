@@ -24,8 +24,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(ColimaStatusPublisher(fromStatus: ColimaStatus(
-            updated: Date.now, running: true, runtime: "Some runtime", kubernetesEnabled: false
+        MainView().environmentObject(ColimaStatusPublisher(fromStatus: Colima.StatusInfo(
+            updated: Date.now, running: true, kubernetesEnabled: false
         )))
     }
 }

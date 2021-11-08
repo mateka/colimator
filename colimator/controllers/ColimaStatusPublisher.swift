@@ -9,8 +9,9 @@ import Foundation
 import Combine
 
 class ColimaStatusPublisher : ObservableObject {
-    @Published var status: ColimaStatus? = nil
+    @Published var status: Colima.StatusInfo? = nil
 
+    private var colima: Colima = Colima()
     private var subscription: AnyCancellable?
 
     init() {
@@ -24,16 +25,17 @@ class ColimaStatusPublisher : ObservableObject {
             }
     }
 
-    init(fromStatus status: ColimaStatus) {
+    init(fromStatus status: Colima.StatusInfo) {
         self.status = status
         self.subscription = nil
     }
 
     @MainActor public func updateStatus() async {
         do {
-            self.status = try await ColimaStatus()
+            self.status = try await colima.status()
         }
         catch {
+            print(error)
             self.status = nil
         }
     }

@@ -90,10 +90,10 @@ struct ColimaStatusView: View {
                     Image(systemName: "helm")  // k8s icon
                 }
 
-                StatusBarElement(color: .primary, background: .gray) {
-                    Text("runtime:")
-                    Image(systemName: "questionmark.circle")
-                }
+//                StatusBarElement(color: .primary, background: .gray) {
+//                    Text("runtime:")
+//                    Image(systemName: "questionmark.circle")
+//                }
 
                 Spacer()
             }
@@ -114,9 +114,8 @@ struct ColimaStatusView_Previews: PreviewProvider {
             .font(.largeTitle)
 
             ColimaStatusView().environmentObject(
-                ColimaStatusPublisher(fromStatus: ColimaStatus(
-                    updated: Date.now, running: false, runtime: "Some runtime",
-                    kubernetesEnabled: false
+                ColimaStatusPublisher(fromStatus: Colima.StatusInfo(
+                    updated: Date.now, running: false, kubernetesEnabled: false
                 )))
         }
     }
